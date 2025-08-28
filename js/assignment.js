@@ -48,11 +48,13 @@ document.getElementById('railway-helpline').addEventListener('click', function()
         singleCallBtn.addEventListener('click', function(){
             let coinRemove = parseInt(document.getElementById('initial-coin').innerText);
             coinRemove = coinRemove - 20;
-            document.getElementById('initial-coin').innerText = coinRemove;
             if(coinRemove < 20){
             alert("You don't have enough coin to call");
             return;
         }
+        
+            document.getElementById('initial-coin').innerText = coinRemove;
+            
         })
         
     }
