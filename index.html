@@ -11,7 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <!-- tailwind and daisy ui link -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -51,7 +51,7 @@
             <button
               class="btn bg-[#00A63E] rounded-3xl text-white font-semibold text-xl"
             >
-              <span>2</span> Copy
+              <span id="initial-copy-count">0</span> Copy
             </button>
           </div>
         </div>
@@ -91,7 +91,7 @@
                     />
                     <img class="heart-icon w-8" src="./assets/heart.png" alt="" />
                   </div>
-                  <h2 class="card-title text-xl font-bold">
+                  <h2 class="card-title text-xl font-bold ">
                     National Emergency Number
                   </h2>
                   <p class="text-gray-500 text-lg">National Emergency</p>
@@ -102,11 +102,11 @@
                     All
                   </p>
                   <div class="card-actions justify-between">
-                    <button class="btn px-10 bg-white text-gray-400 rounded-xl">
+                    <button class="btn px-10 bg-white text-gray-400 rounded-xl copy-button">
                       <span><i class="fa-solid fa-copy"></i></span>Copy
                     </button>
                     <button id="national-emergency-call-btn"
-                      class="btn px-10 bg-[#00A63E] text-white rounded-xl call-btn-features"
+                      class="btn px-10 bg-[#00A63E] text-white rounded-xl call-btn-features call-button"
                     >
                       <span><i class="fa-solid fa-phone"></i></span>Call
                     </button>
@@ -135,11 +135,11 @@
                     Police
                   </p>
                   <div class="card-actions justify-between">
-                    <button class="btn px-10 bg-white text-gray-400 rounded-xl">
+                    <button class="btn px-10 bg-white text-gray-400 rounded-xl copy-button">
                       <span><i class="fa-solid fa-copy"></i></span>Copy
                     </button>
                     <button id="police-helpline"
-                      class="btn px-10 bg-[#00A63E] text-white rounded-xl call-btn-features"
+                      class="btn px-10 bg-[#00A63E] text-white rounded-xl call-btn-features call-button"
                     >
                       <span><i class="fa-solid fa-phone"></i></span>Call
                     </button>
@@ -168,7 +168,7 @@
                     Fire
                   </p>
                   <div class="card-actions justify-between">
-                    <button class="btn px-10 bg-white text-gray-400 rounded-xl">
+                    <button class="btn px-10 bg-white text-gray-400 rounded-xl copy-button">
                       <span><i class="fa-solid fa-copy"></i></span>Copy
                     </button>
                     <button id="fire-service-helpline"
@@ -201,7 +201,7 @@
                     Health
                   </p>
                   <div class="card-actions justify-between">
-                    <button class="btn px-10 bg-white text-gray-400 rounded-xl">
+                    <button class="btn px-10 bg-white text-gray-400 rounded-xl copy-button">
                       <span><i class="fa-solid fa-copy"></i></span>Copy
                     </button>
                     <button id="ambulance-helpline"
@@ -234,7 +234,7 @@
                     Help
                   </p>
                   <div class="card-actions justify-between">
-                    <button class="btn px-10 bg-white text-gray-400 rounded-xl">
+                    <button class="btn px-10 bg-white text-gray-400 rounded-xl copy-button">
                       <span><i class="fa-solid fa-copy"></i></span>Copy
                     </button>
                     <button id="women-helpline"
@@ -267,7 +267,7 @@
                     Govt.
                   </p>
                   <div class="card-actions justify-between">
-                    <button class="btn px-10 bg-white text-gray-400 rounded-xl">
+                    <button class="btn px-10 bg-white text-gray-400 rounded-xl copy-button">
                       <span><i class="fa-solid fa-copy"></i></span>Copy
                     </button>
                     <button id="anti-corruption-helpline"
@@ -300,7 +300,7 @@
                     Electricity
                   </p>
                   <div class="card-actions justify-between">
-                    <button class="btn px-10 bg-white text-gray-400 rounded-xl ">
+                    <button class="btn px-10 bg-white text-gray-400 rounded-xl copy-button ">
                       <span><i class="fa-solid fa-copy"></i></span>Copy
                     </button>
                     <button id="electricity-helpline"
@@ -333,7 +333,7 @@
                     NGO
                   </p>
                   <div class="card-actions justify-between">
-                    <button class="btn px-10 bg-white text-gray-400 rounded-xl">
+                    <button class="btn px-10 bg-white text-gray-400 rounded-xl copy-button">
                       <span><i class="fa-solid fa-copy"></i></span>Copy
                     </button>
                     <button id="brac-helpline"
@@ -366,7 +366,7 @@
                     Travel
                   </p>
                   <div class="card-actions justify-between">
-                    <button class="btn px-10 bg-white text-gray-400 rounded-xl">
+                    <button class="btn px-10 bg-white text-gray-400 rounded-xl copy-button">
                       <span><i class="fa-solid fa-copy"></i></span>Copy
                     </button>
                     <button id="railway-helpline"
@@ -379,19 +379,19 @@
               </div>
             </div>
           </div>
-
+<!-- call history section -->
           <div class="history-card col-span-3 bg-white">
             <div class="flex justify-between items-center p-4">
                 <h3 class="text-xl font-semibold"> <span><i class="fa-regular fa-clock"></i></span> Call History</h3>
-                <button
+                <button id="clear-all"
               class="btn bg-[#00A63E] rounded-3xl text-white font-semibold text-xl"
             >
                Clear
             </button>
             </div>
 
-            <div>
-                
+            <div id="call-history-container">
+              
             </div>
           </div>
         </div>
